@@ -3,6 +3,9 @@
 ## Project Overview
 This project is a Chrome Manifest V3 extension designed to assist with AI-powered Workday application automation while respecting the constraints of the assignment. The implementation focuses on the primary target application: NVIDIA Senior Software Architect – Deep Learning and HPC Communications (JR2016116). It was selected as the primary target because it is explicitly listed and is a representative Workday application workflow.
 
+### Extension UI
+![Workday AI Assistant extension screenshot](assets/extension-screenshot.png)
+
 ## Problem Statement
 Workday job applications contain dynamic form structures, multi-step workflows, optional questions, and conditional rendering. A candidate typically needs to re-enter resume information across multiple sections, and the process is error-prone. This extension attempts to reduce that burden by parsing a resume, identifying Workday fields, matching candidate data semantically, filling known values, validating required data, and requiring explicit user confirmation before any submission.
 
