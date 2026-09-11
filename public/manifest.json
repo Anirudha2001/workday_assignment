@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Workday AI Application Assistant",
+  "version": "1.0.0",
+  "description": "AI-assisted automation for Workday job applications with explicit confirmation before submission.",
+  "permissions": ["storage", "tabs", "scripting"],
+  "host_permissions": [
+    "https://nvidia.wd5.myworkdayjobs.com/*",
+    "https://target.wd5.myworkdayjobs.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Workday AI Assistant",
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://nvidia.wd5.myworkdayjobs.com/*",
+        "https://target.wd5.myworkdayjobs.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}
